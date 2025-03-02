@@ -62,3 +62,14 @@ it("should throw an error if no vlaue is passed into the function", () => {
 
   expect(resultFn).toThrow();
 });
+
+it("should throw an error if provided with multiple arguments instead of an arry", () => {
+  const num1 = 1;
+  const num2 = 2;
+
+  const resultFN = () => {
+    add(num1, num2);
+  };
+
+  expect(resultFN).toThrow();
+});
