@@ -60,7 +60,7 @@ it("should throw an error if no vlaue is passed into the function", () => {
     add();
   };
 
-  expect(resultFn).toThrow();
+  expect(resultFn).toThrow(/is not iterable/);
 });
 
 it("should throw an error if provided with multiple arguments instead of an arry", () => {
@@ -71,5 +71,5 @@ it("should throw an error if provided with multiple arguments instead of an arry
     add(num1, num2);
   };
 
-  expect(resultFN).toThrow();
+  expect(resultFN).toThrow(/is not iterable/);
 });
