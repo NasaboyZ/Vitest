@@ -1,5 +1,6 @@
 import { it, expect } from "vitest";
 import { add } from "./math";
+import exp from "constants";
 
 it("should summarize all number values in a array", () => {
   // Arrange
@@ -37,4 +38,27 @@ it("should yield a correct sum if an array of numeric string values is provided"
 
   //Assert
   expect(result).toBe(expectedResult);
+});
+
+it("should yield 0 if an empty arry is provided", () => {
+  const numbers = [];
+  const result = add(numbers);
+  expect(result).toBe(0);
+});
+
+// it("should throw an error if no vlaue is passed into the function", () => {
+//   try {
+//     const result = add();
+//   } catch (error) {
+//     expect(error).toBeDefined();
+//   }
+// });
+
+// kannn auch so geschrieben werden
+it("should throw an error if no vlaue is passed into the function", () => {
+  const resultFn = () => {
+    add();
+  };
+
+  expect(resultFn).toThrow();
 });
